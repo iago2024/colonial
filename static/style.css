@@ -243,12 +243,16 @@ body {
     color: var(--text-dim);
 }
 
-/* Container do carrossel */
+/* Container do carrossel (MUDANÇA AQUI) */
 .carousel {
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    /* ADICIONADO: Limita a largura e centraliza */
+    max-width: 900px; /* Define uma largura máxima (pode ajustar) */
+    margin: 0 auto;   /* Centraliza o carrossel na seção */
 }
 
 /* Imagens do carrossel (para manter o formato) */
