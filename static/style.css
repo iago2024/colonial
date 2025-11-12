@@ -21,13 +21,10 @@ body {
     color: var(--text-dim);
     overflow-x: hidden;
     
-    /* Imagem de Fundo com Efeito Parallax */
-    /* TROQUE A URL PELA SUA FOTO */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080.png?text=COLOQUE+A+URL+DA+SUA+FOTO+AQUI');
-    
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed; 
+    /* A IMAGEM DE FUNDO FOI MOVIDA PARA O INDEX.HTML
+      PARA O FLASK PODER ENCONTRAR O ARQUIVO 'fundo.jpg'
+    */
+    background-color: var(--bg-dark); /* Cor de fallback */
 }
 
 /* --- REMOVENDO AS PARTÍCULAS --- */
