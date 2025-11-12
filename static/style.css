@@ -1,0 +1,246 @@
+/* --- Tema "Pousada Dark" (Versão Completa) --- */
+:root {
+    --bg-dark: #222222;
+    --bg-card: #333333;
+    --border-color: #444444;
+    --text-white: #ffffff;
+    --text-dim: #bbbbbb;
+    --primary: #6d8b74;
+    --primary-hover: #5a7462;
+}
+
+/* 1. Adiciona rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Estilos Globais e Fundo --- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-dim);
+    overflow-x: hidden;
+    
+    /* Imagem de Fundo com Efeito Parallax */
+    /* TROQUE A URL PELA SUA FOTO */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080.png?text=COLOQUE+A+URL+DA+SUA+FOTO+AQUI');
+    
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; 
+}
+
+/* --- REMOVENDO AS PARTÍCULAS --- */
+#particles-js {
+    display: none;
+}
+
+/* --- Caixa de Conteúdo Central (HERO) --- */
+.content-box {
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    
+    /* Fundo "Vidro Fosco" (Glassmorphism) */
+    background: rgba(40, 40, 40, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+/* --- Títulos e Textos --- */
+.display-3, .display-4,
+.homepage-gallery h2 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: var(--text-white);
+    text-shadow: none;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-dim);
+}
+
+/* --- Texto de Descrição --- */
+.description-text {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    color: var(--text-dim);
+    padding: 0 10px;
+}
+
+/* --- Botões Customizados --- */
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light {
+    transition: all 0.3s ease;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-outline-light:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Seção de Comodidades (Clicável) --- */
+.amenities-section {
+    position: relative;
+    z-index: 1;
+    padding: 60px 0;
+    background-color: #2a2a2a; 
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.amenity-item {
+    color: var(--text-dim);
+    transition: all 0.3s ease;
+    padding: 10px;
+    text-decoration: none; /* Remove sublinhado do link */
+    display: block; /* Faz o link preencher o espaço */
+}
+
+.amenity-item svg {
+    color: var(--primary); /* Cor verde do botão */
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.amenity-item h5 {
+    color: var(--text-white);
+    font-family: 'Segoe UI', sans-serif; /* Fonte normal */
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.amenity-item:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+    color: var(--text-dim);
+}
+
+.amenity-item:hover svg {
+    color: var(--text-white);
+    transform: scale(1.1);
+}
+
+/* --- Estilos para a galeria --- */
+.homepage-gallery {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+    background-color: var(--bg-dark); 
+    border-top: 1px solid var(--border-color);
+}
+
+.homepage-gallery .lead {
+    color: var(--text-dim);
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: var(--bg-card);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+    opacity: 0.85;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* --- Botão Flutuante do WhatsApp --- */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background-color: #25D366;
+    color: #FFFFFF;
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.whatsapp-fab:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+}
+.whatsapp-fab svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 2px;
+}
+.whatsapp-fab span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* --- Estilos dos Modais (Pop-ups) --- */
+.modal-content {
+    background-color: var(--bg-card); /* Fundo do cartão escuro */
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-dim);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header .modal-title {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    color: var(--text-white);
+    font-weight: bold;
+}
+
+.modal-body {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Botão de fechar "X" (branco) */
+.btn-close-white {
+    filter: invert(1) grayscale(100) brightness(200);
+}
