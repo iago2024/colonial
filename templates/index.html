@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     
+    <style>
+        body {
+            /* Fundo com sua foto (fundo.jpg) */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{ url_for('static', filename='images/fundo.jpg') }}");
+            
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed; 
+        }
+    </style>
+    
 </head>
 <body>
 
@@ -48,7 +59,7 @@
                 
                 <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="#" class="amenity-item" data-bs-toggle="modal" data-bs-target="#modalPiscina">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16"><path d="M.5 8a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8.5a.5.5 0 0 1 1 0V12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8.5A.5.5 0 0 1 .5 8z"/><path d="M12.746 4.606c.36.36.36.944 0 1.304l-1.6 1.6c-.36.36-.944.36-1.304 0-.36-.36-.36-.944 0-1.304l1.6-1.6c.36-.36.944-.36 1.304 0zM8 4.606c.36.36.36.944 0 1.304l-1.6 1.6c-.36.36-.944.36-1.304 0-.36-.36-.36-.944 0-1.304l1.6-1.6c.36-.36.944.36 1.304 0zM3.254 4.606c.36.36.36.944 0 1.304l-1.6 1.6c-.36.36-.944.36-1.304 0-.36-.36-.36-.944 0-1.304l1.6-1.6c.36-.36.944-.36 1.304 0z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16"><path d="M.5 8a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8.5a.5.5 0 0 1 1 0V12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8.5A.5.5 0 0 1 .5 8z"/><path d="M12.746 4.606c.36.36.36.944 0 1.304l-1.6 1.6c-.36.36-.944.36-1.304 0-.36-.36-.36-.944 0-1.304l1.6-1.6c.36-.36.944-.36 1.304 0zM8 4.606c.36.36.36.944 0 1.304l-1.6 1.6c-.36.36-.944.36-1.304 0-.36-.36-.36-.944 0-1.304l1.6-1.6c.36-.36.944.36 1.304 0zM3.254 4.606c.36.36.36.944 0 1.304l-1.6 1.6c-.36.36-.944.36-1.304 0-.36-.36-.36-.944 0-1.304l1.6-1.6c.36-.36.944.36 1.304 0z"/></svg>
                         <h5 class="mt-2">Piscina</h5>
                     </a>
                 </div>
@@ -79,21 +90,25 @@
                 Veja um pouco do que espera por você.
             </p>
             <div class="row g-4">
+                
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="gallery-item">
-                        <img src="https://via.placeholder.com/600x400.png?text=Foto+Chalé" alt="Foto Chalé" class="img-fluid">
+                        <img src="{{ url_for('static', filename='images/chale1.jpg') }}" alt="Foto Chalé" class="img-fluid">
                     </div>
                 </div>
+                
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="gallery-item">
-                        <img src="https://via.placeholder.com/600x400.png?text=Foto+Piscina" alt="Foto Piscina" class="img-fluid">
+                        <img src="{{ url_for('static', filename='images/piscina1.jpg') }}" alt="Foto Piscina" class="img-fluid">
                     </div>
                 </div>
+                
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="gallery-item">
-                        <img src="https://via.placeholder.com/600x400.png?text=Foto+Vista" alt="Foto Vista" class="img-fluid">
+                        <img src="{{ url_for('static', filename='images/vista1.jpg') }}" alt="Foto Vista" class="img-fluid">
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -117,6 +132,7 @@
         </div>
       </div>
     </div>
+    
     <div class="modal fade" id="modalPiscina" tabindex="-1" aria-labelledby="modalPiscinaLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -125,12 +141,13 @@
             <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <img src="https://via.placeholder.com/600x400.png?text=Foto+da+Piscina" class="img-fluid rounded mb-3" alt="Piscina">
+            <img src="{{ url_for('static', filename='images/piscina_modal.jpg') }}" class="img-fluid rounded mb-3" alt="Piscina">
             <p>Nossa piscina é perfeita para relaxar. Horário de funcionamento: 09:00 às 21:00.</p>
           </div>
         </div>
       </div>
     </div>
+    
     <div class="modal fade" id="modalCafe" tabindex="-1" aria-labelledby="modalCafeLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -139,12 +156,13 @@
             <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <img src="https://via.placeholder.com/600x400.png?text=Foto+Café+da+Manhã" class="img-fluid rounded mb-3" alt="Café da Manhã">
+            <img src="{{ url_for('static', filename='images/cafe_modal.jpg') }}" class="img-fluid rounded mb-3" alt="Café da Manhã">
             <p>Desfrute de um café da manhã colonial completo, servido diariamente das 07:00 às 10:00.</p>
           </div>
         </div>
       </div>
     </div>
+    
     <div class="modal fade" id="modalEstacionamento" tabindex="-1" aria-labelledby="modalEstacionamentoLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -168,14 +186,12 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     
     <script>
-      // ========= MUDANÇA AQUI =========
       // Desliga a "restauração de scroll" do navegador
       if (history.scrollRestoration) {
           history.scrollRestoration = 'manual';
       }
       // Leva para o topo IMEDIATAMENTE
       window.scrollTo(0, 0);
-      // ==================================
 
       // Inicializa as animações
       AOS.init({
